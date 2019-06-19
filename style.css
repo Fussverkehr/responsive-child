@@ -545,6 +545,7 @@ ul.slideshow a {
 ul.slideshow img, ul.slideshow a img {
 width: 100%;
 	max-width: 460px;
+	max-height: 360px;
 }
 
 ul.slideshow a span{

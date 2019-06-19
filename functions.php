@@ -9,7 +9,6 @@ wp_enqueue_script( 'slideshow-home', get_stylesheet_directory_uri() . '/js/slide
 }
 add_action( 'wp_enqueue_scripts', 'responsiv_child_styles' );
 
-add_image_size( 'slides', 460, 360, true );
 
 register_sidebar( array(
 						  'name'          => __( 'Ohne Content' ),
