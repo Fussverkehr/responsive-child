@@ -6,15 +6,7 @@
 				jQuery('ul.slideshow a span').hide();
 				var myTimer = setInterval(function startAni(){jQuery('#forbutton').trigger('click');		
 					    },7000);
-				jQuery('.slideshowcontainer').hover(function(){
-				    clearInterval(myTimer);
-				    jQuery('ul.slideshow a span').fadeIn(1000);
-				    			},
-				function(){
-				    jQuery('ul.slideshow a span').fadeOut(1000);
-				    var myTimer = setInterval(function startAni(){jQuery('#forbutton').trigger('click');		
-				    	    },7000);				    
-				});	    				
+				    				
 				
 				jQuery('#forbutton').on('click' , function(){
 				var currentImage = jQuery('ul.slideshow a.active');
@@ -41,4 +33,14 @@ jQuery('#backbutton').on( 'click' , function(){
 			}
 	return false;
 });
+
+jQuery('.slideshowcontainer').hover(function(){
+    clearInterval(myTimer);
+    jQuery('ul.slideshow a span').fadeIn(1000);
+    			},
+function(){
+    jQuery('ul.slideshow a span').fadeOut(1000);
+    var myTimer = setInterval(function startAni(){jQuery('#forbutton').trigger('click');		
+    	    },7000);				    
+});	
 });
