@@ -586,10 +586,6 @@ ul.slideshow a span{
 	bottom: 90px;	
 }*/
 
-ul.rslides {
-	padding-left: 0;
-}
-
 .rslides {
   position: relative;
   list-style: none;
