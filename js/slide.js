@@ -17,7 +17,7 @@
 					} else{
 				jQuery('ul.slideshow a.active').fadeOut(3000).removeClass('active').next().fadeIn(3000).addClass('active');
 						}
-				return false;
+				
 			});
 	 
 jQuery('#backbutton').on( 'click' , function(){
@@ -31,7 +31,6 @@ jQuery('#backbutton').on( 'click' , function(){
 		} else{
 	jQuery('ul.slideshow a.active').fadeOut(3000).removeClass('active').prev().fadeIn(3000).addClass('active');
 			}
-	return false;
 });
 
 jQuery('.slideshowcontainer').hover(function(){
