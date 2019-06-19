@@ -1,5 +1,4 @@
-(function($){
-    $document.ready(function(){
+(function( $ ) {$(document).ready(function($){
 
 				$('.slideshow').wrap('<div class="slideshowcontainer"></div>');
 				$('ul.slideshow a').hide().eq(0).show().addClass('active');			
@@ -42,5 +41,5 @@ $('#backbutton').on( 'click' , function(){
 			}
 	return false;
 });
-
-			}); })(jQuery);
+});
+			(jQuery);
