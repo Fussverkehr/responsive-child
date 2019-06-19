@@ -41,6 +41,11 @@ if( !function_exists( 'responsive_post_meta_data' ) ) :
 	}
 endif;
 
+add_action( 'after_setup_theme', 'wpdocs_theme_setup' );
+function wpdocs_theme_setup() {
+add_image_size( 'home-gallery', 460, 360, true );
+}
+
 /**
  * Sets the post excerpt length to 200 words.
  * Adopted from Coraline
@@ -92,7 +97,6 @@ function responsive_child_custom_excerpt_more( $output ) {
 
 add_filter( 'get_the_excerpt', 'responsive_child_custom_excerpt_more' );
 
-add_image_size( 'home-gallery', 460, 360, true );
 
 /**
  * Override Jetpack's default OpenGraph image.
