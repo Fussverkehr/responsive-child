@@ -13,7 +13,7 @@
 				function(){
 				    jQuery('ul.slideshow a span').fadeOut(1000);
 				    var myTimer = setInterval(function startAni(){jQuery('#forbutton').trigger('click');		
-				    	    },5000);				    
+				    	    },7000);				    
 				});	    				
 				
 				jQuery('#forbutton').on('click' , function(){
