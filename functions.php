@@ -4,7 +4,7 @@ wp_deregister_style( 'responsiv-style');
 wp_register_style('responsiv-style', get_template_directory_uri(). '/style.css');
 wp_enqueue_style('responsiv-style', get_template_directory_uri(). '/style.css');
 wp_enqueue_style( 'childtheme-style', get_stylesheet_directory_uri().'/style.css', array('responsiv-style') );
-wp_enqueue_script( 'slideshow-home', get_stylesheet_directory_uri() . '/js/slide.js', array('jquery'), '1.0.0', true );
+wp_enqueue_script( 'slideshow-home', get_stylesheet_directory_uri() . '/js/responsiveslides.js', array('jquery'), '1.0.0', true );
 
 }
 add_action( 'wp_enqueue_scripts', 'responsiv_child_styles' );
