@@ -109,13 +109,21 @@ else {
 		
 				
 		<ul class="rslides" id="slideshow">
-		<?php query_posts('cat=4,73&has_thumbnail()&orderby=rand'); 
+		<?php 
+		
+		$thumbs = array(
+		            'cat' => 4,73,
+		            'meta_query' => array(array('key' => '_thumbnail_id')),
+		            'orderby'=> 'rand'
+		);
+		
+		query_posts($thumbs); 
 
 		if ( have_posts() ) : while ( have_posts() ) : the_post();?>
 			
 			<a href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>" >
-			   <?php the_post_thumbnail('home-gallery'); ?><p><?php the_title(); ?></p>
-			   </a>
+			<?php the_post_thumbnail('home-gallery'); ?></a><p><a href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>" ><?php the_title(); ?></a></p>
+			   
 		<script>
 		    // You can also use "$(window).load(function() {"
 		    jQuery(function () {
