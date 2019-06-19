@@ -6,14 +6,14 @@
 				jQuery('ul.slideshow a span').hide();
 				var myTimer = setInterval(function startAni(){jQuery('#forbutton').trigger('click');		
 					    },7000);
-				jQuery('.slideshowcontainer').on("mouseover",function(){
-				  clearInterval(myTimer);
+				jQuery('.slideshowcontainer').hover(function(){
+				    clearInterval(myTimer);
 				    jQuery('ul.slideshow a span').fadeIn(1000);
 				    			},
-				jQuery('.slideshowcontainer').on("mouseout",function(){
+				function(){
 				    jQuery('ul.slideshow a span').fadeOut(1000);
 				    var myTimer = setInterval(function startAni(){jQuery('#forbutton').trigger('click');		
-				    	    },7000);				    
+				    	    },5000);				    
 				});	    				
 				
 				jQuery('#forbutton').on('click' , function(){
