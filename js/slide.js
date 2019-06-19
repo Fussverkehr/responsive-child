@@ -1,4 +1,6 @@
-(function( $ ) {$(document).ready(function($){
+(function( $ ) {
+	 "use strict";
+	$(document).ready(function($){
 
 				$('.slideshow').wrap('<div class="slideshowcontainer"></div>');
 				$('ul.slideshow a').hide().eq(0).show().addClass('active');			
