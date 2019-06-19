@@ -4,9 +4,17 @@
 				jQuery('ul.slideshow a').hide().eq(0).show().addClass('active');			
 				jQuery('.slideshowcontainer').after('<a href="#" id="backbutton"><< </a><a href="#" id="forbutton">>></a>');
 				jQuery('ul.slideshow a span').hide();
-				var myTimer = setInterval(function startAni(){jQuery('#forbutton').trigger('click');		
-					    },7000);
-				    				
+				var myTimer;
+				jQuery('.slideshowcontainer').mouseenter(function(){
+				    clearInterval(myTimer);
+				    jQuery('ul.slideshow a span').fadeIn(1000);
+				    			})
+				.mouseleave(function(){
+				    jQuery('ul.slideshow a span').fadeOut(1000);
+				    var myTimer = setInterval(function startAni(){jQuery('#forbutton').trigger('click');		
+				    	    },7000);				    
+				})
+				.mouseleave();
 				
 				jQuery('#forbutton').on('click' , function(){
 				var currentImage = jQuery('ul.slideshow a.active');
@@ -17,7 +25,7 @@
 					} else{
 				jQuery('ul.slideshow a.active').fadeOut(3000).removeClass('active').next().fadeIn(3000).addClass('active');
 						}
-				
+				return false;
 			});
 	 
 jQuery('#backbutton').on( 'click' , function(){
@@ -31,15 +39,6 @@ jQuery('#backbutton').on( 'click' , function(){
 		} else{
 	jQuery('ul.slideshow a.active').fadeOut(3000).removeClass('active').prev().fadeIn(3000).addClass('active');
 			}
+	return false;
 });
-
-jQuery('.slideshowcontainer').hover(function(){
-    clearInterval(myTimer);
-    jQuery('ul.slideshow a span').fadeIn(1000);
-    			},
-function(){
-    jQuery('ul.slideshow a span').fadeOut(1000);
-    var myTimer = setInterval(function startAni(){jQuery('#forbutton').trigger('click');		
-    	    },7000);				    
-});	
 });
