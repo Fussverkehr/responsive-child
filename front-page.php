@@ -108,23 +108,14 @@ else {
 		<img class="front-signal" src="<?php bloginfo('stylesheet_directory'); ?>/signal.png" alt="Begegnungszonen-Signal" />
 		
 				
-		<ul class="rslides" id="slideshow">
+		<ul class="slideshow">
 		<?php query_posts('cat=4,73&has_thumbnail()&orderby=rand'); 
 
 		if ( have_posts() ) : while ( have_posts() ) : the_post();?>
 			
 			<a href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>" >
-			   <?php the_post_thumbnail('home-gallery'); ?><p><?php the_title(); ?></p>
+			   <?php the_post_thumbnail('home-gallery'); ?><span><?php the_title(); ?></span>
 			   </a>
-		<script>
-		    // You can also use "$(window).load(function() {"
-		    jQuery(function () {
-		
-		     		      jQuery("#slideshow").responsiveSlides({
-		        });
-		
-		    });
-		  </script>
 			
 			
 		<?php	
