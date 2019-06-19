@@ -90,6 +90,8 @@ function responsive_child_custom_excerpt_more( $output ) {
 
 add_filter( 'get_the_excerpt', 'responsive_child_custom_excerpt_more' );
 
+add_image_size( 'home-gallery', 460, 360, true );
+
 /**
  * Override Jetpack's default OpenGraph image.
  * Standard is blank WordPress image (https://s0.wp.com/i/blank.jpg).
