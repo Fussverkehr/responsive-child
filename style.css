@@ -4,7 +4,7 @@ Description: Das Theme für begegnunszonen.ch
 Author: Fussverkehr Schweiz
 Author URI: http://fussverkehr.ch
 Template: responsive
-Version: 1.1
+Version: 1.1.1
 GitHub Theme URI: Fussverkehr/responsive-child
 GitHub Theme URI: https://github.com/Fussverkehr/responsive-child
 Tags:
@@ -208,6 +208,7 @@ sub {
 	float: right;
 	margin-bottom: 2.127659574468%;
 	padding-top: 0;
+	padding-right: 2.127659574468%;
 }
 
 .col-60,
@@ -246,12 +247,6 @@ sub {
 	width: 40.425531914894%;
 }
 
-/*.col-460 {
-	align: top;
-	width: 460px;
-float: left;
-	
-}*/
 
 .col-461 {
 	width: 460px;
