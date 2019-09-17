@@ -80,6 +80,11 @@ function responsive_child_auto_excerpt_more( $more ) {
 }
 add_filter( 'excerpt_more', 'responsive_child_auto_excerpt_more' );
 
+add_action( 'init', 'remove_my_action' );
+function remove_my_action(){
+      remove_action( 'wp_head', 'responsive_child_auto_excerpt_more', 5 );
+}
+
 
 
 
