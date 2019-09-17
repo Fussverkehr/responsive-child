@@ -1464,7 +1464,6 @@ ul.menu > li:hover {
 	font-size: 12px;
 	font-weight: 400;
 	height: auto;
-	height: 20px;
 	line-height: 20px;
 	padding: 5px 10px;
 	text-shadow: none;
@@ -1477,6 +1476,10 @@ ul.menu > li:hover {
 	border: none;
 	color: #444444;
 	filter: none;
+}
+
+.menu-item-has-children::after {
+	display: none;
 }
 
 .menu li li:hover {

@@ -627,25 +627,7 @@ if ( ! function_exists( 'responsive_blog_entry_images_size' ) ) {
  */
 function responsive_display_menu_outside_container() {
 	
-	wp_nav_menu(
-		array(
-			'container'       => 'div',
-			'container_class' => 'main-nav',
-			'container_id'    => 'main-nav',
-			'fallback_cb'     => 'responsive_fallback_menu',
-			'theme_location'  => 'header-menu',
-		)
-	);
-	if ( has_nav_menu( 'sub-header-menu', 'responsive' ) ) {
-		wp_nav_menu(
-			array(
-				'container'       => 'div',
-				'container_class' => 'sub-nav',
-				'menu_class'      => 'sub-header-menu',
-				'theme_location'  => 'sub-header-menu',
-			)
-		);
-	}
+
 	get_sidebar( 'top' );
 }
 
