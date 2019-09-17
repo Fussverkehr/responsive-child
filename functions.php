@@ -96,6 +96,9 @@ function responsive_child_custom_excerpt_more( $output ) {
 
 add_filter( 'get_the_excerpt', 'responsive_child_custom_excerpt_more' );
 
+add_filter( 'responsive_display_menu_outside_container',  '__return_false' );
+
+
 
 /**
  * Override Jetpack's default OpenGraph image.
