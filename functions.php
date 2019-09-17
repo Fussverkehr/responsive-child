@@ -80,7 +80,29 @@ function responsive_child_auto_excerpt_more( $more ) {
 }
 add_filter( 'excerpt_more', 'responsive_child_auto_excerpt_more' );
 
-
+function responsive_display_menu_outside_container() {
+	
+	wp_nav_menu(
+		array(
+			'container'       => 'div',
+			'container_class' => 'main-nav',
+			'container_id'    => 'main-nav',
+			'fallback_cb'     => 'responsive_fallback_menu',
+			'theme_location'  => 'header-menu',
+		)
+	);
+	if ( has_nav_menu( 'sub-header-menu', 'responsive' ) ) {
+		wp_nav_menu(
+			array(
+				'container'       => 'div',
+				'container_class' => 'sub-nav',
+				'menu_class'      => 'sub-header-menu',
+				'theme_location'  => 'sub-header-menu',
+			)
+		);
+	}
+	get_sidebar( 'top' );
+}
 
 
 /**
