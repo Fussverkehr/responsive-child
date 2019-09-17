@@ -101,16 +101,31 @@ if( !defined( 'ABSPATH' ) ) {
 		<?php endif; // header image was removed (again) ?>
 
 		
-		
+		<?php wp_nav_menu( array(
+							   'container'       => 'div',
+							   'container_class' => 'main-nav',
+							   'fallback_cb'     => 'responsive_fallback_menu',
+							   'theme_location'  => 'header-menu'
+						   )
+		);
+		?>
+
+		<?php if( has_nav_menu( 'sub-header-menu', 'responsive' ) ) { ?>
+			<?php wp_nav_menu( array(
+								   'container'      => '',
+								   'menu_class'     => 'sub-header-menu',
+								   'theme_location' => 'sub-header-menu'
+							   )
+			);
+			?>
+		<?php } ?>
 
 		<?php responsive_header_bottom(); // after header content hook ?>
 
 	</div><!-- end of #header -->
 <?php responsive_header_end(); // after header container hook ?>
-
-<?php responsive_wrapper(); // before wrapper container hook ?>
 <?php get_sidebar( 'top' ); ?>
-
+<?php responsive_wrapper(); // before wrapper container hook ?>
 	<div id="wrapper" class="clearfix">
 <?php responsive_wrapper_top(); // before wrapper content hook ?>
 <?php responsive_in_wrapper(); // wrapper hook ?>
