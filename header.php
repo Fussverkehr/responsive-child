@@ -125,8 +125,7 @@ if( !defined( 'ABSPATH' ) ) {
 	</div><!-- end of #header -->
 <?php responsive_header_end(); // after header container hook ?>
 <?php 
-if ( is_front_page() ) {
-} else {
+if ( !is_front_page() ) {
 get_sidebar( 'top' ); }
 endif;?>
 <?php responsive_wrapper(); // before wrapper container hook ?>
