@@ -1039,6 +1039,12 @@ margin-bottom: 0.5em;
 	text-align: center;
 }
 
+.post {
+	margin-bottom: 0;
+	border-bottom-style: none;
+	border-bottom-width: 0;
+}
+
 /* =bbPress
     bbPress has its own breadcrumb lists
 -------------------------------------------------------------- */
