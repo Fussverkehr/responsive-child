@@ -311,7 +311,7 @@ img {
 	-ms-interpolation-mode: bicubic;
 	border: 0;
 	height: auto;
-	max-width: 99%;
+	max-width: 100%;
 	vertical-align: center;
 	horizontal-align: center;
 
