@@ -9,6 +9,8 @@ wp_enqueue_script( 'slideshow-home', get_stylesheet_directory_uri() . '/js/slide
 }
 add_action( 'wp_enqueue_scripts', 'responsiv_child_styles' );
 
+remove_action( 'rest_api_init', 'rest_api_default_filters', 10, 1 );
+
 
 register_sidebar( array(
 						  'name'          => __( 'Ohne Content' ),
