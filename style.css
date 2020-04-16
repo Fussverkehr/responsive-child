@@ -387,6 +387,10 @@ label input{
 	margin-right: 1em;
 }
 
+#cf7-location-address input {
+	width: 90% !important;
+}
+
 .-keyword{padding:5px;font-weight:bold !important;}
 
 [class*="tax-check-"] label, [class*="cmf-check-"] label {
