@@ -356,7 +356,7 @@ a {
 }
 
 .sy-pager li.sy-active a {
-	background-color: #0066cc;
+	background-color: #0066cc !important;
 }
 
         
