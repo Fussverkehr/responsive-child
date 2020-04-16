@@ -355,6 +355,10 @@ a {
 	white-space: nowrap;
 }
 
+.sy-pager li.sy-active a {
+	background-color: #0066cc;
+}
+
         
 a:hover,
 a:focus,
