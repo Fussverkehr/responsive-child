@@ -372,7 +372,7 @@ a:active {
 
 /* =Forms
 -------------------------------------------------------------- */
-label, .wpcf7-form-control-wrap {
+label, .wpcf7-form-control-wrap, #cf7-location-map {
 	display: inline-block;
 	padding: 2px 35px 2px 17px;
 	float: none;
