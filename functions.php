@@ -46,6 +46,8 @@ add_action( 'after_setup_theme', 'wpdocs_theme_setup' );
 function wpdocs_theme_setup() {
 add_image_size( 'home-gallery', 460, 360, true );
 add_image_size( 'home-slider', 1000, 360, true );
+add_image_size( 'home-news', 240, 120, array( 'center', 'center' ) );
+
 
 }
 
