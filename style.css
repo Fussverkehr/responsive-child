@@ -941,12 +941,18 @@ span.wpcf7-list-item {
 	width: 99.893617021277%;
 }
 
-#featured p, #featured ul {
+#featured p  {
 	font-size: 16px;
 	font-weight: 200;
 	line-height: 21px;
 	padding: 0 40px 0 20px;
 	text-align: left;
+
+}
+
+#featured ul {
+	font-size: 16px;
+	font-weight: 200;
 
 }
 
@@ -1240,7 +1246,7 @@ display: inline-block;
 /* =Titles
 -------------------------------------------------------------- */
 .featured-title {
-	font-size: 32px;
+	font-size: 36px;
 	letter-spacing: -1px;
 	margin: 0;
 	padding-top: 40px;
